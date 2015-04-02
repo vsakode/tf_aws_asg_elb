@@ -29,7 +29,7 @@ resource "aws_autoscaling_group" "main_asg" {
   depends_on = ["aws_launch_configuration.launch_config"]
 
   //Assumes we want to use the first two ASz of the region
-  availability_zones = ["${var.aws_region}a","${var.aws_region}b"]
+  availability_zones = ["${var.aws_region}a","${var.aws_region}b","${var.aws_region}c"]
 
   name = "${var.asg_name}"
 
